@@ -1,8 +1,3 @@
----
-typora-root-url: img
-
----
-
 # CTFN: Multistage CNN-Transformer Fusion Network for ECG Authentication
 
 This is a deployment documentation for the algorithm presented in my paper.
@@ -21,7 +16,19 @@ The code for this project has been uploaded to GitHub: <https://github.com/heng8
    git clone https://github.com/heng895/CTFN.git
    ```
 
-2. Install virtualenv
+2. download databases
+
+   ECGID: https://physionet.org/content/ecgiddb/1.0.0/
+
+   MIT-ARR: https://physionet.org/content/mitdb/1.0.0/
+
+   MIT-NSR: https://physionet.org/content/nsrdb/1.0.0/
+
+   CYBHi: https://zenodo.org/records/2381823#.XT2Ik9VKG2w
+
+   
+
+3. Install virtualenv
 
    ```shell   
    # Mac OS
@@ -31,7 +38,7 @@ The code for this project has been uploaded to GitHub: <https://github.com/heng8
    $ pip install virtualenv
    ```
 
-3. Create a virtual environment
+4. Create a virtual environment
 
    ```shell
    # Mac OS
@@ -40,7 +47,7 @@ The code for this project has been uploaded to GitHub: <https://github.com/heng8
    $ python3 -mvenv venv
    ```
 
-4. Activate the environment
+5. Activate the environment
 
    ```shell
    # Mac OS
@@ -49,7 +56,7 @@ The code for this project has been uploaded to GitHub: <https://github.com/heng8
    $ venv\Scripts\activate
    ```
 
-5. Install the requirements.txt
+6. Install the requirements.txt
 
    ```shell
    # Mac OS
@@ -58,29 +65,29 @@ The code for this project has been uploaded to GitHub: <https://github.com/heng8
    $ python3 -m pip install -r requirements.txt
    ```
 
-6. Once the data is fully set up, run the following commands to extract signals into readable **csv** file formats
+7. Once the data is fully set up, run the following commands to extract signals into readable **csv** file formats
 
    ```shell
    $ python3 run.py -s-mit
    $ python3 run.py -s-ecgid
    ```
 
-7. For Feature Extraction, run. 
+8. For Feature Extraction, run. 
 
    ```
    $ python3 run.py -f-mit
    $ python3 run.py -f-ecgid
    ```
 
-8. Set up data for Training
+9. Set up data for Training
 
    ```
    $ python3 run.py -setup
    ```
 
-9. Train the CTFN model. 
+10. Train the CTFN model. 
 
-   ```
-   $ python3 run.py -CTFN
-   ```
+    ```
+    $ python3 run.py -CTFN
+    ```
 
